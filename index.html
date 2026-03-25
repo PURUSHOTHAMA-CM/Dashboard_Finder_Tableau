@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Dashboard Selector</title>
+    <style>
+        body { display: flex; height: 100vh; margin: 0; }
+        #chat { width: 30%; padding: 10px; border-right: 1px solid #ccc; }
+        #dashboard { width: 70%; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+
+<div id="chat">
+    <div id="chatBox"></div>
+    <input id="input" placeholder="Ask something..." />
+    <button onclick="send()">Send</button>
+</div>
+
+<div id="dashboard">
+    <iframe id="frame"></iframe>
+</div>
+
+<script src="metadata.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
