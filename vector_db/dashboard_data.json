@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "name": "Sales Dashboard",
+        "description": "This dashboard presents a yearly overview of key business metrics including total sales, profit, and quantity with year-over-year comparison. It includes monthly trends, subcategory performance, and weekly sales and profit trends. It also provides filters for year, category, sub-category, and location, offering a comprehensive view of performance",
+        "URL": "https://public.tableau.com/views/SalesDashboard_17726471142830/SalesDashboard_CB"
+    },
+    {
+        "id": "2",
+        "name": "Customer Dashboard",
+
+        "description": "This dashboard presents a yearly overview of customer metrics including total customers, sales per customer, and total orders with year-over-year comparison. It includes trends over time, customer distribution by number of orders, and top customers by profit. It also provides filters for year, category, sub-category, and location, offering a comprehensive view of customer performance",
+        
+        "URL": "https://public.tableau.com/views/SalesCustomerDashboardsDynamic/CustomerDashboard"
+    },
+    {
+        "id": "3",
+        "name": "HR Overview Dashboard",
+
+        "description": "This dashboard presents an overview of human resources metrics including active employees, hiring and termination trends, and department-wise distribution. It includes demographic insights such as gender, education, age, and performance. It also provides income analysis by education and gender, along with age and salary distribution. Additionally, it shows geographic distribution of employees for a comprehensive workforce overview.",
+
+        "URL": "https://public.tableau.com/views/HumanResourceDashboard_17187075120850/HRSummary"
+    },
+    {
+        "id": "3",
+        "name": "HR Resources Dashboard",
+
+        "description": "This dashboard provides detailed employee-level information including demographics, role, location, salary, and employment status. It displays individual records with attributes such as age, education, department, and tenure. It also allows filtering across multiple dimensions like demographics, role, geography, and salary for detailed analysis.",
+
+        "URL": "https://public.tableau.com/views/HumanResourceDashboard_17187075120850/HRDetails"
+    }
+]
