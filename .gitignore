@@ -1,2 +1,2 @@
-chromar_db/
-__pycache__/
+vector_db/chromar_db/
+vector_db/__pycache__/
