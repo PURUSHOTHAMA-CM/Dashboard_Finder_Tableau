@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from vector_db import collection, model
+from vector_db import collection, get_model
 from fastapi.middleware.cors import CORSMiddleware
 from script import load_data
 
@@ -23,6 +23,8 @@ def home():
 
 @app.get("/search")
 def search_dashboard(query: str):
+
+    model = get_model()
 
     load_data()
     query_embedding = model.encode(query).tolist()

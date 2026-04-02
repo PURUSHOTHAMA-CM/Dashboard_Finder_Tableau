@@ -5,7 +5,7 @@ async function searchDashboard() {
     chat.innerHTML+=`<div>USER: ${query}</div>`;
 
     try{
-        const response = await fetch(`http://127.0.0.1:8000/search?query=${query}`);
+        const response = await fetch(`https://dashboard-finder-tableau-1.onrender.com/search?query=${query}`);
         const data = await response.json();
 
         console.log(data);
