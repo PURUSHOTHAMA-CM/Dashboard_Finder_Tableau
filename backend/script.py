@@ -1,4 +1,4 @@
-from vector_db import collection,model
+from vector_db import collection,get_model
 # maintaining common db for both the query engine and script
 import json
 
@@ -9,6 +9,7 @@ with open("dashboard_data.json") as f:
     dashboards=json.load(f)
 
 print("Loaded dashboards")
+model=get_model()
 
 for dash in dashboards:
 
