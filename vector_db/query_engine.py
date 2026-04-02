@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from vector_db import collection, model
 from fastapi.middleware.cors import CORSMiddleware
+from script import load_data
 
 
 app = FastAPI()
@@ -22,6 +23,8 @@ def home():
 
 @app.get("/search")
 def search_dashboard(query: str):
+
+    load_data()
     query_embedding = model.encode(query).tolist()
 
     print("Count:", collection.count())

@@ -8,6 +8,6 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 BASE_DIR=os.path.dirname(os.path.abspath(__file__))
 
 # Persistent DB (important)
-client = chromadb.PersistentClient(path=os.path.join(BASE_DIR,"chroma_db"))
+client = chromadb.PersistentClient(path="./chroma_db")
 
 collection = client.get_or_create_collection(name="dashboards")

@@ -2,7 +2,8 @@ from vector_db import collection,model
 # maintaining common db for both the query engine and script
 import json
 
-print("Starting the script")
+def load_data():
+    print("Starting the script")
 
 with open("dashboard_data.json") as f:
     dashboards=json.load(f)
@@ -11,7 +12,7 @@ print("Loaded dashboards")
 
 for dash in dashboards:
 
-    print("Processing Dashboards");
+    # print("Processing Dashboards");
     embedding=model.encode(dash["description"]).tolist()
 
     collection.add(
@@ -21,5 +22,6 @@ for dash in dashboards:
         metadatas=[{"name":dash["name"],"url": dash["URL"]}]
     )
 
-print("Inserted")
-print("Count:", collection.count())
+print("Loaded the data")
+# print("Count:", collection.count())
+
