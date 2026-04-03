@@ -15,7 +15,9 @@ app.add_middleware(
 )
 
 
-
+@app.on_event("startup")
+def startup_event():
+    load_data()
 
 @app.get("/")
 def home():
