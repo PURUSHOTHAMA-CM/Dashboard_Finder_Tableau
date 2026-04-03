@@ -28,7 +28,6 @@ def search_dashboard(query: str):
 
     model = get_model()
 
-    load_data()
     query_embedding = model.encode(query).tolist()
 
     print("Count:", collection.count())
