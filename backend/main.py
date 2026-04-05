@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from query_engine import search_dashboards
 from script import load_data
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
