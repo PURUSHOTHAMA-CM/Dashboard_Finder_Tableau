@@ -17,9 +17,9 @@ app.add_middleware(
 def startup_event():
     try:
         load_data()
-        print("✅ Startup complete")
+        print("Startup complete")
     except Exception as e:
-        print("❌ Startup failed:", e)
+        print("Startup failed:", e)
 
 @app.get("/")
 def home():
