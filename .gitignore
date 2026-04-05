@@ -1,2 +1,2 @@
-vector_db/chroma_db/
-vector_db/__pycache__/
+backend/chroma_db/
+backend/__pycache__/
