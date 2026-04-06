@@ -13,18 +13,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.on_event("startup")
-def startup_event():
-    try:
-        load_data()
-        print("Startup complete")
-    except Exception as e:
-        print("Startup failed:", e)
-
 @app.get("/")
 def home():
     return {"status": "running"}
 
 @app.get("/search")
 def search(query: str):
+     try:
+        load_data()
+        print("Startup complete")
+    except Exception as e:
+        print("Startup failed:", e)
     return  search_dashboard(query)
