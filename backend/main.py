@@ -19,7 +19,7 @@ def home():
 
 @app.get("/search")
 def search(query: str):
-     try:
+    try:
         load_data()
         print("Startup complete")
     except Exception as e:
