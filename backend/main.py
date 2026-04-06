@@ -3,7 +3,17 @@ from query_engine import search_dashboard
 from script import load_data
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    try:
+        print("Pre-loading data...")
+        load_data()
+        print("Data loaded successfully.")
+    except Exception as e:
+        print(f"Loading failed: {e}")
+    yield
+
+app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,9 +29,4 @@ def home():
 
 @app.get("/search")
 def search(query: str):
-    try:
-        load_data()
-        print("Startup complete")
-    except Exception as e:
-        print("Startup failed:", e)
     return  search_dashboard(query)
