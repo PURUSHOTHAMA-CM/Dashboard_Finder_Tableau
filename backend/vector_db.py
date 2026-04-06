@@ -1,5 +1,4 @@
 import chromadb
-from sentence_transformers import SentenceTransformer
 import os
 
 os.environ["HF_HOME"]="/tmp"
@@ -10,6 +9,7 @@ model = None
 def get_model():
     global model
     if model is None:
+        from sentence_transformers import SentenceTransformer
         print("📦 Loading model...")
         model = SentenceTransformer('all-MiniLM-L6-v2',cache_folder="/tmp")
     return model
