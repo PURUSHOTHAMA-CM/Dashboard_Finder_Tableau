@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from query_engine import search_dashboards
+from query_engine import search_dashboard
 from script import load_data
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -27,4 +27,4 @@ def home():
 
 @app.get("/search")
 def search(query: str):
-    return  search_dashboards(query)
+    return  search_dashboard(query)
